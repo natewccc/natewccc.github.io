@@ -9,44 +9,53 @@
 		background: rgb(164,126,9);
 	background: linear-gradient(0deg, rgb(75, 60, 18) 40%, rgba(5,120,26,1) 100%);
 	}
-	.header {
+	#header {
 		text-align: center;
-		background-color: rgba(255, 0, 0, 0.2);
+		font-size: 20px;
+		color: rgb(91, 150, 238);
+		-webkit-text-stroke: 1px white;
 	}
 
 </style>
 <script>
+	jQuery(function($) {
+		var divs = $('#header');
+		$(window).on('scroll', function(){
+			var st = $(this).scrollTop();
+			divs.css({
+				'margin-top' : -(st/3)+"px",
+				'opacity' : 1 - st/35
+				
+			
+			});
+		});
+
+	});
 	
 </script>
 </head>
 
 <body>
 	<div class = "background">
-	<div class="header">
+	<div id="header">
 		<h1> Constructing An Eco-Friendly Home </h1>
-		<p> How to develop a home that is good </p>
 	</div>
-	<div class="para">
-		<h2>Geo-thermal Building</h2>
-		<p>The use of nasdjgn</p>
-		<p>hi</p>
-		<p>hi</p>
-		<p>hi</p>
-		<p>hi</p>
-		<p>hi</p>
-		<p>hi</p>
-		<p>hi</p>
-		<p>hi</p>
-		<p>hi</p>
-		<p>hi</p>
-		<p>hi</p>
-		<p>hi</p>
-		<p>hi</p>
-		<p>hi</p>
-		<p>hi</p>
-		<p>hi</p>
+		<h2>"What even is an eco-friendly home?"</h2>
+		<p>An eco-friendly home is a home that uses
+		materials and technology in a way that is <br>designed to reduce
+		carbon footprint and be overall better for the environment. 
+		</p>
+		<p>Eco-friendly homes have features such as...</p>
+		<ul>
+		<li>Sustainable/locally sources materials</li>
+		<li>Solar panels and other renewable energy</li>
+		<li>Geothermal heating & cooling</li>
+		<li>LED lighting</li>
 
-	</div>
+		</ul>
+
+	
+	
 	</div>
 </body>
 </html>
